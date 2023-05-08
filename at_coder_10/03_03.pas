@@ -29,17 +29,7 @@ var
 n, t, a : integer;
 arr: array of integer; // int型　配列
 i, ans, absvalue, tmp: integer;
-yy : Double;
-
-begin
-read(n);
-read(t,a);
-
-var
-n, t, a : integer;
-arr: array of integer; // int型　配列
-i, ans, absvalue, tmp: integer;
-yy : Double;
+yy : Double; // double　型で小数対応
 
 begin
 read(n);
@@ -74,31 +64,7 @@ end;
 writeln(ans);
 
 end.
-SetLength(arr, n);
 
-// === 配列で値取得
-for i := 0 to n - 1 do begin
-read(arr[i]);
-// writeln(arr[i]);
-end;
 
-// === ループして判定ロジック
-for i := 0 to n - 1 do begin
 
-// Double型へ代入
-yy := t - arr[i] * 0.006;
 
-// Double型を四捨五入して、integr型へ変換
-tmp := Round(yy);
-
-// abs で絶対値へ変換
-absvalue := abs(tmp);
-
-if absvalue > a then begin
-ans := ans + 1;
-end;
-end;
-
-writeln(ans);
-
-end.

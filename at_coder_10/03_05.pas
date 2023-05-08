@@ -41,7 +41,6 @@ fukuokayamaguchi
 出力例 4 
 fkoaaauh
 
-
 }
 
 
@@ -73,10 +72,10 @@ end;
  
  // === 判定ロジック　A ~ Z までの文字列間をループして、文字を取得
  for i := a_idx to z_idx do begin
- 	ans_str := ans_str + s[i];
+ 	ans_str := ans_str + s[i]; // === 文字列を追加していく
  end;
  
- // === A ~ Z までの文字数を出力
+ // ===　Length で文字列の長さを取得できる A ~ Z までの文字数を出力
  writeln(Length(ans_str));
  
 
